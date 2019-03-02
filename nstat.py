@@ -7,9 +7,9 @@ from influxdb import InfluxDBClient
 
 host = '127.0.0.1'
 username = 'admin'
-pass = 'yourinfluxdbpass'
+password = 'yourinfluxdbpass'
 
-client = InfluxDBClient(host=host, port=8086, username=username, password=pass)
+client = InfluxDBClient(host=host, port=8086, username=username, password=password)
 client.switch_database('stats')
 
 date = os.popen("date +%s").read().split('\n')
